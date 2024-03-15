@@ -1,4 +1,5 @@
 import type { AWS } from '@serverless/typescript';
+import { MyCustomRole } from './resources';
 
 import hello from '@functions/hello';
 
@@ -38,7 +39,7 @@ const serverlessConfiguration: AWS = {
     Resources: {
       MyCustomRole,
     },
-    }
+  },
 };
 
 module.exports = serverlessConfiguration;
