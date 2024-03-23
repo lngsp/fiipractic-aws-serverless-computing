@@ -30,6 +30,13 @@ export const MyCustomRole = {
                     ],
                     Resource: "*",
                 },
+                {
+                    Effect: "Allow",
+                    Action: [
+                        "s3:*"
+                    ],
+                    Resource: "*"
+                }
                 ],
             },
         },

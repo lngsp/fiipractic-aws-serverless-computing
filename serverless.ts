@@ -1,7 +1,7 @@
 import type { AWS } from '@serverless/typescript';
 import { MyCustomRole } from './resources';
 
-import hello from '@functions/hello';
+import {Functions} from './functions';
 
 const serverlessConfiguration: AWS = {
   service: 'fiipractic-aws-serverless-computing',
@@ -21,7 +21,8 @@ const serverlessConfiguration: AWS = {
     region: "eu-west-1",
   },
   // import the function via paths
-  functions: { hello },
+  // scoatem parantezele pentru ca noi importam un obiect si daca ar fi intre acolade ar fi un obiect in obiect
+  functions: Functions ,
   package: { individually: true },
   custom: {
     esbuild: {
